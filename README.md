@@ -16,6 +16,7 @@
 
 
 ## 📝 Additional Information
+- cdv's [Wikipedia page](https://en.wikipedia.org/wiki/CDV_Software)
 - Download all games [here](https://github.com/kk-dev7/cdv/releases/tag/download)
 - You can extract the `.xpk` files that contain game assets using meth0d's [XPK Tool](https://github.com/The-Meth0d/XPKTool-SantaClausInTrouble)
 - You can make your own asset mod by following these steps:
