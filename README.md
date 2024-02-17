@@ -16,7 +16,8 @@ SCIT got a remake in 2020, you can [buy it](https://store.steampowered.com/app/1
 
 ## 📂 Downloads
 - [All games](/CDV-Games.zip) (Freeware)
-- [SCIT Cheat Table](/SCIT_v1.1.CT)
+- [SCIT Cheat Table](/SCIT_v1.1.CT) (Cheat Engine required)
+- [Secret Demo Level](/SECRET_DEMO_LEVEL.xpk) (replace the original xmas.xpk file with this, then start a new game)
 
 ## 👾 Mods
 How to make your own mods:
