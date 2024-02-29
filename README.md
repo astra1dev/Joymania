@@ -18,7 +18,7 @@ More information on cdv's [Wikipedia page](https://en.wikipedia.org/wiki/CDV_Sof
 There is also a nice article dealing with cdv's history [here](https://knightsandmerchants.net/information/joymania)
 
 ## 📂 Downloads
-- [All games](/CDV-Games.zip) (Freeware)
+- [All games](/Downloads)
 - [SCIT Cheat Table](/SCIT_v1.1.CT) (Cheat Engine required)
 - [Secret Demo Level](/SECRET_DEMO_LEVEL.xpk) (replace the original xmas.xpk file with this, then start a new game)
 
