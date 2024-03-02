@@ -1,3 +1,5 @@
-1. `Rosso Rabbit In Trouble.iso` - installer for RRIT
-2. `Santa Claus in trouble ...again!.zip` - FULL + portable version of SCITAGAIN
-3. `santasetup.exe` - installer for SCIT
+| Game | File | Type | Info |
+|------|------|------|------|
+| Rosso Rabbit in trouble | `Rosso Rabbit In Trouble.iso` | Installer / Setup | **FULL VERSION** |
+| Santa Claus in trouble ...again! | `Santa Claus in trouble ...again!.zip` | Portable | **FULL VERSION** |
+| Santa Claus in trouble | `santasetup.exe` | Installer / Setup 
