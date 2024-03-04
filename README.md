@@ -23,10 +23,19 @@ There is also a nice article dealing with cdv's history [here](https://knightsan
 - [Secret Demo Level](/SECRET_DEMO_LEVEL.xpk) (replace the original xmas.xpk file with this, then start a new game)
 
 ## 👾 Extracting assets
+### SCIT, SCIT-AGAIN, RRIT
 - You can extract the `.xpk` files that contain game assets using meth0d's [XPK Tool](https://github.com/The-Meth0d/XPKTool-SantaClausInTrouble)
-- You can now edit the assets or just explore them
+- You can now explore and edit the assets as you wish
 - Pack the edited assets to a new `.xpk` file with XPK Tool and share it with others
 
 You can install other's asset mods by simply replacing the original `.xpk` file with the mod one. Make sure to backup the original one first!
 
-**If you want to extract SCITHD assets, you can use Jeysym's [PAK Tool](https://github.com/jeysym/scit-hd-pak-tool).**
+### SCITHD
+
+- You can extract the `.pak` files that contain game assets using Jeysym's [PAK Tool](https://github.com/jeysym/scit-hd-pak-tool)
+- You can now explore and edit the assets as you wish
+- Pack the edited assets to a new `.pak` file with PAK Tool and share it with others
+
+You can install other's asset mods by simply replacing the original `.xpk` file with the mod one. 
+
+If you want to uninstall mods, you can use Steam's `verify integrity of game files` feature to restore the original assets.
