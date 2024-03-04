@@ -10,7 +10,7 @@ They have created many games, however this repository is only about the followin
 | Game | Release date | Price | Additional info |
 |------|--------------|-------|-----------------|
 | Santa Claus in trouble | December 2, 2002 | Free | 
-| Santa Claus in trouble (HD) | 2020| [Buy on Steam for 10$](https://store.steampowered.com/app/1431350/Santa_Claus_in_Trouble_HD/) | Remake of SCIT |
+| Santa Claus in trouble (HD) | December 21, 2020 | [Buy on Steam for 10$](https://store.steampowered.com/app/1431350/Santa_Claus_in_Trouble_HD/) | Remake of SCIT |
 | Santa Claus in trouble... again! | Christmas 2004 | Free demo. Full version isn't buyable anymore |
 | Rosso Rabbit in trouble | Easter 2003 | Free demo. Full version isn't buyable anymore |
 
