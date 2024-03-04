@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./logo.png">
+  <img src="./logo.jpeg">
 </p>
 
 Joymania Development is a independent game developer based in Germany founded by Peter Ohlmann and Adam Sprys in 1997.
