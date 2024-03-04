@@ -1,21 +1,37 @@
 <p align="center">
-  <img src="./cdv.png">
+  <img src="./logo.png">
 </p>
 
-## 🎮 About
-**CDV Software Entertainment AG** was a german video game publisher that went bankrupt in 2010. 
+Joymania Development is a independent game developer based in Germany founded by Peter Ohlmann and Adam Sprys in 1997.
 
-They have created many games, however this repository is only about the following platformers:
+Links:
+- [Wikipedia page](https://de.wikipedia.org/wiki/Joymania_Development)
+- [nice article dealing with the history](https://knightsandmerchants.net/information/joymania)
+- [Twitter account](https://twitter.com/JoymaniaD)
+- [YouTube channel](https://www.youtube.com/channel/UCygzsuAGgd5Qs9bcZsNGZ6Q)
+- [Official website](https://joymania-games.com/)
+- [Mobygames page](https://www.mobygames.com/company/1796/joymania-development/)
+- [ModDB page](https://www.moddb.com/company/joymania-development)
 
-| Game | Release date | Price | Additional info | Mods |
-|------|--------------|-------|-----------------|------|
-| Santa Claus in trouble | December 2, 2002 | Free | 
-| Santa Claus in trouble (HD) | December 21, 2020 | [Buy on Steam for 10$](https://store.steampowered.com/app/1431350/Santa_Claus_in_Trouble_HD/)<br>(Buy it around christmas, because then it's only 2,50$) | Remake of SCIT | [Retro Music (adds the original music from 2002)](https://www.moddb.com/mods/santa-claus-in-trouble-hd-retro-music/downloads/scit-hd-retro-music) |
-| Santa Claus in trouble... again! | Christmas 2004 | Free demo. Full version isn't buyable anymore |
-| Rosso Rabbit in trouble | Easter 2003 | Free demo. Full version isn't buyable anymore |
+## 🎮 Games List
+### Santa Claus in Trouble
+- Release date: December 2, 2002
+- Price: Free
 
-More information on cdv's [Wikipedia page](https://en.wikipedia.org/wiki/CDV_Software).
-There is also a nice article dealing with cdv's history [here](https://knightsandmerchants.net/information/joymania)
+### Santa Claus in Trouble (HD)
+- Release date: December 21, 2020
+- Price: [Buy on Steam for 10$](https://store.steampowered.com/app/1431350/Santa_Claus_in_Trouble_HD/)
+- Additional info: Buy it around Christmas, because then it's only 2,50$. Remake of SCIT.
+- Mods: [Retro Music (adds the original music from 2002)](https://www.moddb.com/mods/santa-claus-in-trouble-hd-retro-music/downloads/scit-hd-retro-music)
+
+### Santa Claus in Trouble... again!
+- Release date: Christmas 2004
+- Price: Free demo. Full version isn't buyable anymore
+
+### Rosso Rabbit in Trouble
+- Release date: Easter 2003
+- Price: Free demo. Full version isn't buyable anymore
+
 
 ## 📂 Downloads
 - [All games](/Downloads)
