@@ -10,7 +10,7 @@ They have created many games, however this repository is only about the followin
 | Game | Release date | Price | Additional info | Mods |
 |------|--------------|-------|-----------------|------|
 | Santa Claus in trouble | December 2, 2002 | Free | 
-| Santa Claus in trouble (HD) | December 21, 2020 | [Buy on Steam for 10$](https://store.steampowered.com/app/1431350/Santa_Claus_in_Trouble_HD/)<br>Tip: buy it around christmas, because then it only costs 2,50$ | Remake of SCIT | [Retro Music (adds the original music from 2002)](https://www.moddb.com/mods/santa-claus-in-trouble-hd-retro-music/downloads/scit-hd-retro-music) |
+| Santa Claus in trouble (HD) | December 21, 2020 | [Buy on Steam for 10$](https://store.steampowered.com/app/1431350/Santa_Claus_in_Trouble_HD/)<br>(Buy it around christmas, because then it only costs 2,50$) | Remake of SCIT | [Retro Music (adds the original music from 2002)](https://www.moddb.com/mods/santa-claus-in-trouble-hd-retro-music/downloads/scit-hd-retro-music) |
 | Santa Claus in trouble... again! | Christmas 2004 | Free demo. Full version isn't buyable anymore |
 | Rosso Rabbit in trouble | Easter 2003 | Free demo. Full version isn't buyable anymore |
 
