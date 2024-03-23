@@ -2,45 +2,38 @@
   <img src="./logo.jpeg" width=512 height=384>
 </p>
 
-Joymania Development is a independent game developer based in Germany founded by Peter Ohlmann and Adam Sprys in 1997.
+<p align="center">
+  Joymania Development is a independent game developer based in Germany founded by Peter Ohlmann and Adam Sprys in 1997.
+</p>
 
-Official accounts:
+### Official accounts
 - [Wikipedia page](https://de.wikipedia.org/wiki/Joymania_Development)
 - [Twitter account](https://twitter.com/JoymaniaD)
 - [YouTube channel](https://www.youtube.com/channel/UCygzsuAGgd5Qs9bcZsNGZ6Q)
 - [Website](https://joymania-games.com/)
 
-Other links:
+### Other links
 - [Nice article dealing with the history](https://knightsandmerchants.net/information/joymania)
 - [Mobygames page](https://www.mobygames.com/company/1796/joymania-development/)
 - [ModDB page](https://www.moddb.com/company/joymania-development)
 
-## 🎮 Games List
-### Santa Claus in Trouble
-- 🗓️ **Release date:** December 2, 2002
-- 💰 **Price:** Free
-- 👾 **Mods:** [Secret Demo Level](/SECRET_DEMO_LEVEL.xpk) (replace the original xmas.xpk file with this, then start a new game)
+# 🎮 Games
 
-### Santa Claus in Trouble (HD)
-- 🗓️ **Release date:** December 21, 2020
-- 💰 **Price:** [Buy on Steam for 10$](https://store.steampowered.com/app/1431350/Santa_Claus_in_Trouble_HD/)
-- 📝 **Additional info:** Buy it around Christmas, because then it's only 2,50$. Remake of SCIT.
-- 👾 **Mods:** [Retro Music (adds the original music from 2002)](https://www.moddb.com/mods/santa-claus-in-trouble-hd-retro-music/downloads/scit-hd-retro-music)
-
-### Santa Claus in Trouble... again!
-- 🗓️ **Release date:** Christmas 2004
-- 💰 **Price:** Free demo. Full version isn't buyable anymore
-
-### Rosso Rabbit in Trouble
-- 🗓️ **Release date:** Easter 2003
-- 💰 **Price:** Free demo. Full version isn't buyable anymore
+| Game | Release date | Price | Additional info |
+|------|--------------|-------|-----------------|
+| Santa Claus in Trouble | December 2, 2002 | Free | 
+| Santa Claus in Trouble (HD) | December 21, 2020 | [Buy on Steam for 10$](https://store.steampowered.com/app/1431350/Santa_Claus_in_Trouble_HD/)<br>(Around christmas it's only 2,50$) |
+| Santa Claus in Trouble... again! | Christmas 2004 | Free demo version.<br>Full version can no longer be purchased. |
+| Rosso Rabbit in Trouble | Easter 2003 | Free demo version.<br>Full version can no longer be purchased. |
 
 
-## 📂 Downloads
+# 📂 Downloads
 - [All games](/Downloads)
 - [[SCIT] Cheat Table](/SCIT_v1.1.CT) (Cheat Engine required)
+- [[SCIT] Secret Demo Level Mod](/SECRET_DEMO_LEVEL.xpk) (replace the original xmas.xpk file with this, then start a new game)
+- [[SCITHD] Retro Music Mod (adds the original music from 2002)](https://www.moddb.com/mods/santa-claus-in-trouble-hd-retro-music/downloads/scit-hd-retro-music)
 
-## 👾 Extracting assets
+# 👾 Extracting assets
 ### SCIT, SCIT-AGAIN, RRIT
 - You can extract the `.xpk` files that contain game assets using meth0d's [XPK Tool](https://github.com/The-Meth0d/XPKTool-SantaClausInTrouble)
 - You can now explore and edit the assets as you wish
