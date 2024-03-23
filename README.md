@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  Joymania Development is a independent game developer based in Germany founded by Peter Ohlmann and Adam Sprys in 1997.
+  <h3>Joymania Development is a independent game developer based in Germany founded by Peter Ohlmann and Adam Sprys in 1997.</h3>
 </p>
 
 ### Official accounts
@@ -19,8 +19,8 @@
 
 # 🎮 Games
 
-| Game | Release date | Price | Additional info |
-|------|--------------|-------|-----------------|
+| Game | Release date | Price |
+|------|--------------|-------|
 | Santa Claus in Trouble | December 2, 2002 | Free | 
 | Santa Claus in Trouble (HD) | December 21, 2020 | [Buy on Steam for 10$](https://store.steampowered.com/app/1431350/Santa_Claus_in_Trouble_HD/)<br>(Around christmas it's only 2,50$) |
 | Santa Claus in Trouble... again! | Christmas 2004 | Free demo version.<br>Full version can no longer be purchased. |
