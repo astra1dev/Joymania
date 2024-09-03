@@ -28,12 +28,17 @@
 
 
 # 📂 Downloads
-- [[SCIT] Cheat Table](/SCIT_v1.1.2.CT)
-  - with useful features like infinite health, infinite jumps and more (Cheat Engine required)
-- [[SCIT] Secret Demo Level Mod](/SECRET_DEMO_LEVEL.xpk)
-  - replace the original xmas.xpk file with this, then start a new game (backup the original one first)
-- [[SCITHD] Retro Music Mod](https://www.moddb.com/mods/santa-claus-in-trouble-hd-retro-music/downloads/scit-hd-retro-music)
-  - adds the original music from 2002
+## [SCIT] Cheat Table
+[Download](/SCIT_v1.1.2.CT)
+
+<img src="https://github.com/user-attachments/assets/da5dc50f-97f2-40f2-942d-f3bc5ed782cb">
+
+## [SCIT] Secret Demo Level Mod
+- Move the original `xmas.xpk` file to a different location on your PC
+- [Download](/SECRET_DEMO_LEVEL.xpk) the `SECRET_DEMO_LEVEL.xpk` file, rename it to `xmas.xpk` and put it into your game folder
+
+## [SCITHD] Retro Music Mod
+Adds the original music from 2002 (Made by Jeysym). [Download](https://moddb.com/mods/santa-claus-in-trouble-hd-retro-music/downloads/scit-hd-retro-music)
 
 # 👾 Asset modding
 ### SCIT, SCIT-AGAIN, RRIT
