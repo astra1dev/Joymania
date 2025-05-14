@@ -33,6 +33,14 @@
 
 <img src="https://github.com/user-attachments/assets/da5dc50f-97f2-40f2-942d-f3bc5ed782cb">
 
+Changelog:
+- v1.1.3: added X and Z axis hooks to codelist
+
+## [ALL] Hex Pattern
+- A hex pattern designed for the use with [ImHex](https://github.com/werwolv/imhex) hex editor. It automatically highlights the different data sections of the xpk archive file formats used in SCIT (`xmas.xpk`), SCIT-AGAIN (`xmas.xpk`) and RRIT (`bb.xpk`). Just open the xpk file in ImHex, then click File → Import → Pattern file and select `joymania_xpk.hexpat`.
+
+<img src="https://github.com/user-attachments/assets/8dc9c48c-bb2b-461c-a41b-fcb612557b3a">
+
 ## [SCIT] Secret Demo Level Mod
 - Move the original `xmas.xpk` file to a different location on your PC
 - [Download](/SECRET_DEMO_LEVEL.xpk) the `SECRET_DEMO_LEVEL.xpk` file, rename it to `xmas.xpk` and put it into your game folder
