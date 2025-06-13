@@ -40,3 +40,16 @@ Alternatively, you can download the `.dll` file from the latest release, which w
 # 🛠️ Usage
 - To unpack: Drop a .XPK FILE on the executable or run `XPKTool.exe FILE.xpk`.
 - To repack: Drop a FOLDER on the executable or run `XPKTool.exe FOLDER`.
+
+# Details
+The XPK file is a custom archive format used by the game.
+
+- The first 4 bytes (UINT32) tell how many files are in the archive (177 for Santa Claus In Trouble).
+- The next 177*4=708 bytes are the file name offsets of each file in the archive.
+- The next 4 bytes is the FileDataSizeOffset
+- The next ? bytes are the names of the files in the archive, which are null-terminated strings (ASCII -> readable).
+- The next 4 bytes are the FileDataSize, which is the total size of the file data in the archive.
+- The next 177*4=708 bytes are the File sizes of each file in the archive.
+- The next 177*4=708 bytes are the creation dates of each file in the archive.
+- The next 177*4=708 bytes are the file data offsets of each file in the archive.
+- The remaining bytes are the file data itself.
