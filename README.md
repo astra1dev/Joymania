@@ -7,12 +7,14 @@
 </p>
 
 ### Official accounts
+
 - [Wikipedia page](https://de.wikipedia.org/wiki/Joymania_Development)
 - [Twitter account](https://twitter.com/JoymaniaD)
 - [YouTube channel](https://www.youtube.com/channel/UCygzsuAGgd5Qs9bcZsNGZ6Q)
 - [Website](https://joymania-games.com/)
 
 ### Other links
+
 - [Nice article dealing with the history](https://knightsandmerchants.net/information/joymania)
 - [Mobygames page](https://www.mobygames.com/company/1796/joymania-development/)
 - [ModDB page](https://www.moddb.com/company/joymania-development)
@@ -28,7 +30,9 @@
 
 
 # 📂 Downloads
+
 ## [SCIT] Cheat Table
+
 [Download](/SCIT_v1.1.2.CT)
 
 <img src="https://github.com/user-attachments/assets/da5dc50f-97f2-40f2-942d-f3bc5ed782cb">
@@ -41,15 +45,25 @@ Changelog:
 
 <img src="https://github.com/user-attachments/assets/8dc9c48c-bb2b-461c-a41b-fcb612557b3a">
 
+## [ALL] JDToolbox
+
+See [here](/JDToolbox).
+
+![](/JDToolbox/preview.png)
+
 ## [SCIT] Secret Demo Level Mod
+
 - Move the original `xmas.xpk` file to a different location on your PC
 - [Download](/SECRET_DEMO_LEVEL.xpk) the `SECRET_DEMO_LEVEL.xpk` file, rename it to `xmas.xpk` and put it into your game folder
 
 ## [SCITHD] Retro Music Mod
+
 Adds the original music from 2002 (Made by Jeysym). [Download](https://moddb.com/mods/santa-claus-in-trouble-hd-retro-music/downloads/scit-hd-retro-music)
 
 # 👾 Asset modding
+
 ### SCIT, SCIT-AGAIN, RRIT
+
 - Using meth0d's [XPK Tool](https://github.com/The-Meth0d/XPKTool-SantaClausInTrouble), extract the files:
   - `xmas.xpk` for Santa Claus in trouble
   - `xmas.xpk` for Santa Claus in trouble... again!
