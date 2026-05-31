@@ -3,8 +3,11 @@
 
 HANDLE hCurrentUIThread = nullptr;
 
-/// <summary>DLL entry point.</summary>
-/// <see href="https://learn.microsoft.com/en-us/windows/win32/dlls/dllmain">Documentation</see>
+static HMODULE realDll = nullptr;
+typedef HRESULT (WINAPI *PFN_DirectInput8Create)(HINSTANCE hinst, DWORD dwVersion, REFIID riid, LPVOID* ppvOut, LPUNKNOWN punkOuter);
+static PFN_DirectInput8Create real_DirectInput8Create = nullptr;
+
+/// DLL entry point, see https://learn.microsoft.com/en-us/windows/win32/dlls/dllmain
 BOOL WINAPI DllMain(HINSTANCE hinstDLL, DWORD fdwReason, LPVOID lpvReserved) {
     switch (fdwReason)
     {
@@ -20,18 +23,23 @@ BOOL WINAPI DllMain(HINSTANCE hinstDLL, DWORD fdwReason, LPVOID lpvReserved) {
             // Thread-specific cleanup code here
             break;
         case DLL_PROCESS_DETACH:
+            Logger::Log("DllMain called with DLL_PROCESS_DETACH (lpvReserved: " + FormatHex((uintptr_t)lpvReserved) + ")");
+
             TerminateThread(hCurrentUIThread, 0);
+
+            if (realDll != nullptr)
+            {
+                real_DirectInput8Create = nullptr;
+
+                FreeLibrary(realDll);
+                realDll = nullptr;
+            }
+
             break;
     }
     return TRUE; // Successful initialization
 }
 
-
-typedef HRESULT (WINAPI *PFN_DirectInput8Create)(HINSTANCE hinst, DWORD dwVersion, REFIID riid, LPVOID* ppvOut, LPUNKNOWN punkOuter);
-static HMODULE realDll = NULL;
-static PFN_DirectInput8Create real_DirectInput8Create = NULL;
-
-/// <summary>Proxy function for <c>DirectInput8Create</c></summary>
 extern "C" HRESULT __stdcall DirectInput8Create(HINSTANCE hinst, DWORD dwVersion, REFIID riid, LPVOID* ppvOut, LPUNKNOWN punkOuter)
 {
     if (!realDll) {
