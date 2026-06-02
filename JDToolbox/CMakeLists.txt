@@ -10,7 +10,7 @@ set(CMAKE_CXX_COMPILER i686-w64-mingw32-g++)
 
 # Create the DLL
 add_library(JDToolbox SHARED
-        src/entrypoint.cpp
+        src/dllmain.cpp
 )
 
 target_sources(JDToolbox PRIVATE
@@ -43,7 +43,7 @@ set_target_properties(JDToolbox PROPERTIES
 
 # Pass the .def file and enable stdcall fixup
 target_link_options(JDToolbox PRIVATE
-        dinput8.def
+        "${CMAKE_SOURCE_DIR}/src/dinput8/dinput8.def"
         -Wl,--enable-stdcall-fixup
         -static # I hate this because it increases file size by 10MB, but without this the game crashes in Proton
         #-static-libgcc
