@@ -14,20 +14,20 @@ add_library(JDToolbox SHARED
 )
 
 target_sources(JDToolbox PRIVATE
-        imgui/imgui.cpp
-        imgui/imgui_draw.cpp
-        imgui/imgui_tables.cpp
-        imgui/imgui_widgets.cpp
-        imgui/imgui_demo.cpp
-        imgui/backends/imgui_impl_win32.cpp
-        imgui/backends/imgui_impl_dx9.cpp
+        deps/imgui/imgui.cpp
+        deps/imgui/imgui_draw.cpp
+        deps/imgui/imgui_tables.cpp
+        deps/imgui/imgui_widgets.cpp
+        deps/imgui/imgui_demo.cpp
+        deps/imgui/backends/imgui_impl_win32.cpp
+        deps/imgui/backends/imgui_impl_dx9.cpp
 )
 
 # Ensure correct exports
 target_compile_definitions(JDToolbox PRIVATE UNICODE _UNICODE)
 
 # Specify include directories
-target_include_directories(JDToolbox PUBLIC imgui imgui/backends)
+target_include_directories(JDToolbox PUBLIC deps/imgui deps/imgui/backends)
 
 # Export symbols (optional, more control)
 #[[set_target_properties(JDToolbox PROPERTIES
