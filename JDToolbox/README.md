@@ -17,7 +17,6 @@ I haven't decided on a name for the project yet, so for now it's just "JDToolbox
 - find health & axis ptrs in SCITHD, rosso, scitagain
 - find velocity and current level ptr in all games
 - add OldPhysics toggle scithd (maybe this is too hard idk)
-- rewrite most of the code with multi-game compatibility in mind (need a better way of detecti[README.md](../README.md)ng the game)
 - decide where to put log files (use spdlog?). for SCITHD we can just put it in the same folder as the executable, but for the older games we might have to put them into temp or appdata.
   the problem with the older games is that they aren't on Steam, so the default ACLs are inherited from Program Files, preventing us from writing to the game folder.
   i don't know if there is an easy way to check if we have write permissions to the current folder.

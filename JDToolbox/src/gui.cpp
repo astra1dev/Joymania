@@ -17,7 +17,7 @@
 #include "logger.h"
 #include "font.cpp"
 #include "utils.cpp"
-//#include "check_game.cpp"
+#include "game_info.h"
 
 // Global variables for ImGui state
 bool menu_Show = true;
@@ -30,31 +30,6 @@ int menu_InitialX = 100;
 int menu_InitialY = 100;
 POINTS menu_Position = { 100, 100 };
 
-// Game variables
-struct GameInfo
-{
-    std::string gameName;
-    std::string processName;
-    std::string productName;
-    uint64_t fileHash;
-    uintptr_t baseAddress;
-    std::vector<uintptr_t> healthOffsets;
-    std::vector<uintptr_t> jumpOffsets;
-};
-
-std::vector<GameInfo> games = {
-    { "Santa Claus in Trouble", "SantaClausInTrouble.exe", "", 0,
-        0x0009FE1C, { 0x14, 0x50 }, { 0x14, 0x58 } },
-
-    { "Rosso Rabbit in Trouble", "RossoRabbitInTrouble.exe", "", 0,
-        0x00ABCDEF, { 0x20, 0x60 } },
-
-    { "Santa Claus in Trouble... again!", "SantaClaus2.exe", "", 0,
-        0x00123456, { 0x18, 0x54 } },
-
-    { "Santa Claus in Trouble (HD)", "SantaClausInTrouble.exe", "", 0}
-};
-
 GameInfo* currentGame = nullptr;
 
 int health = 0;
@@ -64,31 +39,6 @@ float posX = 1.0f;
 float posY = 2.0f;
 float posZ = 3.0f;
 int level = 0;
-
-/// <summary>Detect the game based on process name</summary>
-/// <returns>Pointer to matching GameInfo or nullptr if not found</returns>
-GameInfo* DetectGame()
-{
-    wchar_t processPath[MAX_PATH] = {};
-    GetModuleFileNameW(NULL, processPath, MAX_PATH);
-
-    // Extract just the filename
-    wchar_t* exeName = wcsrchr(processPath, L'\\');
-    exeName = exeName ? exeName + 1 : processPath;
-
-    // Convert to std::string for comparison
-    char exeNameA[MAX_PATH];
-    wcstombs(exeNameA, exeName, MAX_PATH);
-
-    for (auto& game : games) {
-        if (_stricmp(game.processName.c_str(), exeNameA) == 0) {
-            Logger::Log("Detected game: " + game.gameName);
-            return &game;
-        }
-    }
-    Logger::Log("No supported game detected: " + std::string(exeNameA));
-    return nullptr;
-}
 
 // Globals for window and device
 HWND g_hWnd = nullptr;

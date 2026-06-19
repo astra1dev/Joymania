@@ -31,6 +31,40 @@ static std::string FormatHex(const uintptr_t value)
     return ss.str();
 }
 
+/// <summary>Detect the game based on process name</summary>
+/// <returns>Pointer to matching GameInfo or nullptr if not found</returns>
+GameInfo* DetectGame()
+{
+    wchar_t processPath[MAX_PATH] = {};
+    GetModuleFileNameW(NULL, processPath, MAX_PATH);
+
+    // Extract just the filename
+    wchar_t* exeName = wcsrchr(processPath, L'\\');
+    exeName = exeName ? exeName + 1 : processPath;
+
+    // Convert to std::string for comparison
+    char exeNameA[MAX_PATH];
+    wcstombs(exeNameA, exeName, MAX_PATH);
+
+    for (auto& game : games) {
+        if (_stricmp(game.processName.c_str(), exeNameA) == 0) {
+            // File names for SCIT and SCITHD are the same, so we check for the presence of shaderMagic.dll
+            if (game.processName == "SantaClausInTrouble.exe")
+            {
+                if (GetModuleHandleW(L"shaderMagic.dll") != nullptr)
+                {
+                    Logger::Log("Detected game: " + games[3].gameName);
+                    return &games[3]; // Return SCITHD
+                }
+            }
+            Logger::Log("Detected game: " + game.gameName);
+            return &game;
+        }
+    }
+    Logger::Log("No supported game detected: " + std::string(exeNameA));
+    return nullptr;
+}
+
 /// <summary>Helper to get module base address</summary>
 /// <param name="moduleName">Name of the module (e.g., "game.exe")</param>
 /// <returns>Base address of the module or 0 if not found</returns>

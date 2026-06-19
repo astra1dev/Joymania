@@ -4,7 +4,7 @@
 
 HANDLE hCurrentUIThread = nullptr;
 
-/// DLL entry point, see https://learn.microsoft.com/en-us/windows/win32/dlls/dllmain
+// DLL entry point, see https://learn.microsoft.com/en-us/windows/win32/dlls/dllmain
 BOOL WINAPI DllMain(HINSTANCE hinstDLL, DWORD fdwReason, LPVOID lpvReserved) {
     switch (fdwReason)
     {
