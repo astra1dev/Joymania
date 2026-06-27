@@ -25,7 +25,8 @@ inline std::vector<GameInfo> games = {
     { "Santa Claus in Trouble... again!", "SantaClaus2.exe", 0,
         0x000B26C8, { 0x14, 0xA0 } },
 
-    { "Santa Claus in Trouble (HD)", "SantaClausInTrouble.exe", 0}
+    { "Santa Claus in Trouble (HD)", "SantaClausInTrouble.exe", 0,
+        0x0039BCE8, { 0x50 }}
 };
 
 #endif //JDTOOLBOX_GAME_INFO_H
