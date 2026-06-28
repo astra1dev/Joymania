@@ -94,10 +94,6 @@ uintptr_t ResolvePointer(const uintptr_t base, const std::vector<uintptr_t>& off
     uintptr_t ptr = 0;
 
     // Read the initial pointer stored at `base` (e.g., module + baseAddress)
-    if (IsBadReadPtr(reinterpret_cast<void*>(base), sizeof(uintptr_t))) {
-        Logger::Log("ResolvePointer: Invalid read at base " + FormatHex(base));
-        return 0;
-    }
     // use memcpy to avoid UB from directly dereferencing arbitrary addresses
     std::memcpy(&ptr, reinterpret_cast<void*>(base), sizeof(ptr));
     if (ptr == 0) {
@@ -108,10 +104,6 @@ uintptr_t ResolvePointer(const uintptr_t base, const std::vector<uintptr_t>& off
     // Walk the chain: for each offset except the last, read the pointer at (ptr + offset)
     for (size_t i = 0; i + 1 < offsets.size(); ++i) {
         const uintptr_t addr = ptr + offsets[i];
-        if (IsBadReadPtr(reinterpret_cast<void*>(addr), sizeof(uintptr_t))) {
-            Logger::Log("ResolvePointer: Invalid read at " + FormatHex(addr));
-            return 0;
-        }
         std::memcpy(&ptr, reinterpret_cast<void*>(addr), sizeof(ptr));
         if (ptr == 0) {
             Logger::Log("ResolvePointer: Null pointer read from " + FormatHex(addr));
