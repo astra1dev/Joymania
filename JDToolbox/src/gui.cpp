@@ -264,15 +264,18 @@ DWORD WINAPI ImGuiThread(LPVOID)
         return 1;
     }
 
-    std::wstring moduleNameW(currentGame->processName.begin(), currentGame->processName.end());
-    uintptr_t moduleBase = GetModuleBase(moduleNameW.c_str());
-    if (!moduleBase) {
-        MessageBoxA(NULL, "Failed to get module base!", "Error", MB_OK | MB_ICONERROR);
+    // If the parameter is NULL, GetModuleHandle returns a handle to the file used to create the calling process (.exe file).
+    // HMODULE is a handle to a module, which is just the base address of the module in memory.
+    HMODULE game_handle = GetModuleHandleA(nullptr);
+    if (game_handle == nullptr) {
+        Logger::Log("GetModuleHandleA failed with error: " + std::to_string(GetLastError()));
+        MessageBoxA(NULL, "Failed to get game handle!", "Error", MB_OK | MB_ICONERROR);
         return 1;
     }
+    Logger::Log("Game module base address: " + FormatHex(reinterpret_cast<uintptr_t>(game_handle)));
 
-    uintptr_t base = moduleBase + currentGame->baseAddress;
-    Logger::Log("Base address calculated: " + FormatHex(base));
+    uintptr_t base = reinterpret_cast<uintptr_t>(game_handle) + currentGame->baseAddress;
+    Logger::Log("Pointer base calculated: " + FormatHex(base));
 
     InitImGuiWindow(L"JDToolbox Window", L"JDToolbox");
 

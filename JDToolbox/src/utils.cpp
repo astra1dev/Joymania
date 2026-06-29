@@ -65,23 +65,6 @@ GameInfo* DetectGame()
     return nullptr;
 }
 
-/// <summary>Helper to get module base address</summary>
-/// <param name="moduleName">Name of the module (e.g., "game.exe")</param>
-/// <returns>Base address of the module or 0 if not found</returns>
-uintptr_t GetModuleBase(const wchar_t* moduleName) {
-    HMODULE hModule = GetModuleHandleW(moduleName);
-
-    char moduleNameA[MAX_PATH]; // Convert to ANSI for logging
-    wcstombs(moduleNameA, moduleName, MAX_PATH);
-
-    if (!hModule) {
-        Logger::Log(std::string("GetModuleHandleW failed for module: ") + moduleNameA);
-        return 0;
-    }
-    Logger::Log(std::string("GetModuleBase: ") + moduleNameA);
-    return reinterpret_cast<uintptr_t>(hModule);
-}
-
 /// <summary>Resolve a multi-level pointer chain</summary>
 /// <param name="base">Base address (e.g., module base + static offset)</param>
 /// <param name="offsets">Vector of offsets to traverse</param>
