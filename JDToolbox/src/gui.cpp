@@ -347,14 +347,17 @@ DWORD WINAPI ImGuiThread(LPVOID)
 
             ImGui::SameLine();
             if (ImGui::Button("Apply")) {
-                if (WriteMemory<int>(healthAddr, uiHealthSnapshot)) {
-                    Logger::Log("Health set to " + std::to_string(uiHealthSnapshot) + " at address " + FormatHex(healthAddr));
-                    // apply succeeded -> clear dirty because memory now matches UI
-                    uiHealthDirty = false;
-                    // optional: update uiHealth to reflect memory (already equals snapshot)
-                    uiHealth = uiHealthSnapshot;
-                } else {
-                    Logger::Log("WriteMemory failed for address " + FormatHex(healthAddr));
+                if (healthAddr != 0)
+                {
+                    if (std::memcpy(reinterpret_cast<void*>(healthAddr), &uiHealthSnapshot, sizeof(uiHealthSnapshot))) {
+                        Logger::Log("Health set to " + std::to_string(uiHealthSnapshot) + " at address " + FormatHex(healthAddr));
+                        // apply succeeded -> clear dirty because memory now matches UI
+                        uiHealthDirty = false;
+                        // optional: update uiHealth to reflect memory (already equals snapshot)
+                        uiHealth = uiHealthSnapshot;
+                    } else {
+                        Logger::Log("WriteMemory failed for address " + FormatHex(healthAddr));
+                    }
                 }
             }
 
@@ -363,14 +366,9 @@ DWORD WINAPI ImGuiThread(LPVOID)
             ImGui::Checkbox("Infinite Jump", &infiniteJump);
             if (infiniteJump)
             {
-                if (WriteMemory<int>(jumpAddr, 0))
-                {
-                    // Logger::Log("Infinite Jump enabled, jump set to 256 at address " + FormatHex(jumpAddr));
-                }
-                else
-                {
-                    Logger::Log("WriteMemory failed for address " + FormatHex(jumpAddr));
-                }
+                int n = 0;
+                std::memcpy(reinterpret_cast<void*>(jumpAddr), &n, sizeof(n));
+                // Logger::Log("Infinite Jump enabled, jump set to 256 at address " + FormatHex(jumpAddr));
             }
 
             ImGui::Separator();

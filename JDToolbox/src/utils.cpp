@@ -4,23 +4,6 @@
 #include <cstring>
 #include <psapi.h>
 
-/// <summary>Write a value to a specified memory address</summary>
-/// <param name="addr">Target memory address</param>
-/// <param name="value">Value to write</param>
-/// <returns>True on success, false on failure</returns>
-template<typename T>
-bool WriteMemory(const uintptr_t addr, const T& value)
-{
-    if (addr == 0) return false;
-    if (IsBadWritePtr(reinterpret_cast<void*>(addr), sizeof(T)))
-    {
-        Logger::Log("WriteMemory: Invalid write pointer at address " + FormatHex(addr));
-        return false;
-    }
-    std::memcpy(reinterpret_cast<void*>(addr), &value, sizeof(T));
-    return true;
-}
-
 /// <summary>Helper to format pointer / address as hex string</summary>
 /// <param name="value">Pointer or address value</param>
 /// <returns>Formatted hex string (e.g., "0xDEADBEEF")</returns>

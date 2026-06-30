@@ -5,14 +5,9 @@
 #include <windows.h>
 #include "game_info.h"
 
-template<typename T>
-bool WriteMemory(uintptr_t addr, const T& value);
-
 static std::string FormatHex(uintptr_t value);
 
 GameInfo* DetectGame();
-
-uintptr_t GetModuleBase(const wchar_t* moduleName);
 
 uintptr_t ResolvePointer(uintptr_t base, const std::vector<uintptr_t>& offsets);
 
