@@ -3,7 +3,7 @@
   <CheatEntries>
     <CheatEntry>
       <ID>0</ID>
-      <Description>"Santa Claus in trouble Cheat Menu v1.1.2"</Description>
+      <Description>"Santa Claus in trouble Cheat Table"</Description>
       <Options moHideChildren="1"/>
       <Color>00FF00</Color>
       <VariableType>Auto Assembler Script</VariableType>
@@ -202,6 +202,39 @@ SantaClausInTrouble.exe+43E4: 8B 49 08                 - mov ecx,[ecx+08]
                   <ID>0</ID>
                 </Hotkey>
               </Hotkeys>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>23</ID>
+              <Description>"Player X-Axis Position"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>Float</VariableType>
+              <Address>"SantaClausInTrouble.exe"+0009FE1C</Address>
+              <Offsets>
+                <Offset>14</Offset>
+                <Offset>14</Offset>
+              </Offsets>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>19</ID>
+              <Description>"Player Y-Axis Position"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>Float</VariableType>
+              <Address>"SantaClausInTrouble.exe"+0009FE1C</Address>
+              <Offsets>
+                <Offset>18</Offset>
+                <Offset>14</Offset>
+              </Offsets>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>21</ID>
+              <Description>"Player Z-Axis Position"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>Float</VariableType>
+              <Address>"SantaClausInTrouble.exe"+0009FE1C</Address>
+              <Offsets>
+                <Offset>1C</Offset>
+                <Offset>14</Offset>
+              </Offsets>
             </CheatEntry>
           </CheatEntries>
         </CheatEntry>

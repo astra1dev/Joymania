@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <b>Joymania Development is a independent game developer based in Germany founded by Peter Ohlmann and Adam Sprys in 1997.</b>
+  <b>Joymania Development is an independent game developer based in Germany founded by Peter Ohlmann and Adam Sprys in 1997.</b>
 </p>
 
 ### Official accounts
@@ -31,17 +31,14 @@
 
 # 📂 Downloads
 
-## [SCIT] Cheat Table
+## [SC] Cheat Table
 
-[Download](/SCIT_v1.1.2.CT)
+[Download](/SantaClausInTrouble.CT)
 
 <img src="https://github.com/user-attachments/assets/da5dc50f-97f2-40f2-942d-f3bc5ed782cb">
 
-Changelog:
-- v1.1.3: added X and Z axis hooks to codelist
-
 ## [ALL] Hex Pattern
-- A hex pattern designed for the use with [ImHex](https://github.com/werwolv/imhex) hex editor. It automatically highlights the different data sections of the xpk archive file formats used in SCIT (`xmas.xpk`), SCIT-AGAIN (`xmas.xpk`) and RRIT (`bb.xpk`). Just open the xpk file in ImHex, then click File → Import → Pattern file and select `joymania_xpk.hexpat`.
+- A hex pattern designed for the use with [ImHex](https://github.com/werwolv/imhex) hex editor. It automatically highlights the different data sections of the xpk archive file formats used in SC (`xmas.xpk`), SC2 (`xmas.xpk`) and RR (`bb.xpk`). Just open the xpk file in ImHex, then click File → Import → Pattern file and select `joymania_xpk.hexpat`.
 
 <img src="https://github.com/user-attachments/assets/8dc9c48c-bb2b-461c-a41b-fcb612557b3a">
 
@@ -51,18 +48,18 @@ See [here](/JDToolbox).
 
 ![](/JDToolbox/preview.png)
 
-## [SCIT] Secret Demo Level Mod
+## [SC] Secret Demo Level Mod
 
 - Move the original `xmas.xpk` file to a different location on your PC
 - [Download](/SECRET_DEMO_LEVEL.xpk) the `SECRET_DEMO_LEVEL.xpk` file, rename it to `xmas.xpk` and put it into your game folder
 
-## [SCITHD] Retro Music Mod
+## [SCHD] Retro Music Mod
 
 Adds the original music from 2002 (Made by Jeysym). [Download](https://moddb.com/mods/santa-claus-in-trouble-hd-retro-music/downloads/scit-hd-retro-music)
 
 # 👾 Asset modding
 
-### SCIT, SCIT-AGAIN, RRIT
+### SC, SC2, RR
 
 - Using meth0d's [XPK Tool](https://github.com/The-Meth0d/XPKTool-SantaClausInTrouble), extract the files:
   - `xmas.xpk` for Santa Claus in trouble
@@ -71,7 +68,7 @@ Adds the original music from 2002 (Made by Jeysym). [Download](https://moddb.com
 - Explore and edit the assets as you wish
 - Pack the edited assets to a new `.xpk` file with XPK Tool and share it with others
 
-You can install other's asset mods by replacing the original `.xpk` file with the modded one. Make sure to backup the original one first!
+You can install other's asset mods by replacing the original `.xpk` file with the modded one. Make sure to back up the original one first!
 
 ### Santa Claus in Trouble (HD)
 
@@ -82,4 +79,4 @@ You can install other's asset mods by replacing the original `.xpk` file with th
 - Explore and edit the assets as you wish
 - Pack the edited assets to new `.pak` files with PAK Tool and share it with others
 
-You can install other's asset mods by replacing the original `.pak` files with the modded ones. Make sure to backup the original files first, but in case you mess up, use `verify integrity of game files` in Steam to restore them.
+You can install other's asset mods by replacing the original `.pak` files with the modded ones. Make sure to back up the original files first, but in case you mess up, use `verify integrity of game files` in Steam to restore them.
