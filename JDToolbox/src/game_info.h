@@ -13,11 +13,14 @@ struct GameInfo
     uintptr_t baseAddress;
     std::vector<uintptr_t> healthOffsets;
     std::vector<uintptr_t> jumpOffsets;
+    std::vector<uintptr_t> xPositionOffsets;
+    std::vector<uintptr_t> yPositionOffsets;
+    std::vector<uintptr_t> zPositionOffsets;
 };
 
 inline std::vector<GameInfo> games = {
     { "Santa Claus in Trouble", "SantaClausInTrouble.exe", 0,
-        0x0009FE1C, { 0x14, 0x50 }, { 0x14, 0x58 } },
+        0x0009FE1C, { 0x14, 0x50 }, { 0x14, 0x58 }, { 0x14, 0x14 }, { 0x14, 0x18 }, { 0x14, 0x1C } },
 
     { "Rosso Rabbit in Trouble", "RossoRabbitInTrouble.exe", 0,
         0x000C00A8, { 0x14, 0x54 } },
