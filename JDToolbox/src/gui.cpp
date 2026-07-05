@@ -356,7 +356,7 @@ DWORD WINAPI ImGuiThread(LPVOID)
                         // optional: update uiHealth to reflect memory (already equals snapshot)
                         uiHealth = uiHealthSnapshot;
                     } else {
-                        Logger::Log("WriteMemory failed for address " + FormatHex(healthAddr));
+                        Logger::Log("Failed to set health at address " + FormatHex(healthAddr));
                     }
                 }
             }
@@ -366,9 +366,11 @@ DWORD WINAPI ImGuiThread(LPVOID)
             ImGui::Checkbox("Infinite Jump", &infiniteJump);
             if (infiniteJump)
             {
-                int n = 0;
-                std::memcpy(reinterpret_cast<void*>(jumpAddr), &n, sizeof(n));
-                // Logger::Log("Infinite Jump enabled, jump set to 256 at address " + FormatHex(jumpAddr));
+                if (jumpAddr != 0)
+                {
+                    int n = 0;
+                    std::memcpy(reinterpret_cast<void*>(jumpAddr), &n, sizeof(n));
+                }
             }
 
             ImGui::Separator();

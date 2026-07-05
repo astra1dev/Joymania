@@ -11,7 +11,7 @@ I haven't decided on a name for the project yet, so for now it's just "JDToolbox
 
 ## todo
 
-- update to latest imgui
+- try writing to current dir for log, then TEMP
 - add imgui as CMake dependency instead of vendoring it
 - fix weird crash in proton
 - find health & axis ptrs in SCITHD, rosso, scitagain
