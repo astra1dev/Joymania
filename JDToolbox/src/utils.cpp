@@ -31,13 +31,13 @@ GameInfo* DetectGame()
 
     for (auto& game : games) {
         if (_stricmp(game.processName.c_str(), exeNameA) == 0) {
-            // File names for SCIT and SCITHD are the same, so we check for the presence of shaderMagic.dll
+            // File names for SC and SCHD are the same, so we check for the presence of shaderMagic.dll
             if (game.processName == "SantaClausInTrouble.exe")
             {
                 if (GetModuleHandleW(L"shaderMagic.dll") != nullptr)
                 {
                     Logger::Log("Detected game: " + games[3].gameName);
-                    return &games[3]; // Return SCITHD
+                    return &games[3]; // Return SCHD
                 }
             }
             Logger::Log("Detected game: " + game.gameName);
