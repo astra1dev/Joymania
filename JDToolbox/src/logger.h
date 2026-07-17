@@ -24,7 +24,13 @@ public:
         std::lock_guard lock(GetMutex());
         InitLogFile();
         std::ofstream log(log_file_name, std::ios::app);
-        log << msg << std::endl;
+
+        const auto tp_utc = std::chrono::system_clock::now();
+        //auto now_str = std::vformat("{:%Y-%m-%d %X}", std::make_format_args(now)); // "{:%Y_%m_%d_%H_%M_%S}", "{:%H:%M:%S.%f}", "{:%X}"
+
+        // Use local time, for UTC log tp_utc directly
+        log << "[" << std::chrono::current_zone()->to_local(tp_utc) << "] " << msg << std::endl;
+        //std::cout << msg << std::endl;
     }
 private:
     static std::mutex& GetMutex() {
@@ -34,6 +40,7 @@ private:
     static void InitLogFile() {
         static bool initialized = false;
         if (!initialized) {
+            // Truncate (clear) the log file if it already exists
             std::ofstream log(log_file_name, std::ios::trunc);
 
             /*wchar_t tempPath[MAX_PATH] = {0};
@@ -49,10 +56,6 @@ private:
             log_file_name = std::string(buffer) + "JDToolbox.log";
             std::ofstream log(log_file_name, std::ios::trunc);*/
 
-            const auto now = std::chrono::system_clock::now();
-            const std::time_t now_c = std::chrono::system_clock::to_time_t(now);
-            log << std::put_time(std::localtime(&now_c), "%Y-%m-%d %H:%M:%S") << std::endl;
-            log << "----------------------------------------" << std::endl;
             initialized = true;
         }
     }
