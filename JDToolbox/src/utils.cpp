@@ -77,12 +77,7 @@ uintptr_t ResolvePointer(const uintptr_t base, const std::vector<uintptr_t>& off
         }
     }
 
-    // Final address points to value: ptr + lastOffset
     const uintptr_t finalAddr = ptr + offsets.back();
-    if (IsBadReadPtr(reinterpret_cast<void*>(finalAddr), 1)) {
-        Logger::Log("ResolvePointer: Invalid final address " + FormatHex(finalAddr));
-        return 0;
-    }
 
     return finalAddr;
 }

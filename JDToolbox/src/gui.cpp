@@ -311,8 +311,10 @@ DWORD WINAPI ImGuiThread(LPVOID)
             uintptr_t jumpAddr = ResolvePointer(base, currentGame->jumpOffsets);
 
             int memHealth = 0;
-            if (!IsBadReadPtr((void*)healthAddr, sizeof(int)))
+            if (healthAddr != 0)
+            {
                 memHealth = *reinterpret_cast<int*>(healthAddr);
+            }
 
             static int uiHealth = 0;
             static bool uiHealthDirty = false;

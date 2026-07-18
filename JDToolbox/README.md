@@ -12,7 +12,6 @@ I haven't decided on a name for the project yet, so for now it's just "JDToolbox
 ## todo
 
 - find missing offsets using CE (infinite jump, player position & velocity, present amount)
-- remove usages of `IsBadReadPtr` and `IsBadWritePtr`
 - use CMake FetchContent for imgui instead of vendoring it
 - fix weird crash in proton (`if (auto module = GetModuleHandleW(L"ntdll.dll"); module && GetProcAddress(module, "wine_get_version"))` to check for wine/proton)
 - add OldPhysics toggle SCHD (maybe this is too hard idk)
