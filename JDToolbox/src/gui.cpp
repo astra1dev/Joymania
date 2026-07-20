@@ -258,6 +258,12 @@ void RightTableText(const char* text) {
 
 DWORD WINAPI ImGuiThread(LPVOID)
 {
+    AllocConsole();
+    freopen_s((FILE**)stdout, "CONOUT$", "w", stdout);
+    //SetConsoleOutputCP(CP_UTF8);
+    //SetConsoleTitleA(std::format("Debug Console {} - {}", __DATE__, __TIME__).c_str());
+    std::cout << "Console created" << std::endl;
+
     currentGame = DetectGame();
     if (!currentGame) {
         MessageBoxA(NULL, "Game not supported or not detected!", "Error", MB_OK | MB_ICONERROR);
@@ -595,5 +601,9 @@ DWORD WINAPI ImGuiThread(LPVOID)
     CleanupDeviceD3D();
     DestroyWindow(g_hWnd);
     UnregisterClass(wc.lpszClassName, wc.hInstance);
+
+    fclose(stdout);
+    FreeConsole();
+
     return 0;
 }
